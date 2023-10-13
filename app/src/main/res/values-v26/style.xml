@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RoundedButton">
+        <item name="android:paddingVertical">16dp</item>
+        <item name="android:paddingHorizontal">8dp</item>
+        <item name="android:background">@drawable/rectangle_rounded</item>
+    </style>
+</resources>
