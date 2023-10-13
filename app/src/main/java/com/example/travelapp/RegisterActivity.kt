@@ -65,7 +65,7 @@ class RegisterActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener
         dayOfMonth: Int
     ) {
         with (binding) {
-            btnShowTglLahir.text = "$dayOfMonth/$month/$year"
+            btnShowTglLahir.text = "$dayOfMonth/${month+1}/$year"
             canRegister = checkUserAges(dayOfMonth, month, year)
         }
     }

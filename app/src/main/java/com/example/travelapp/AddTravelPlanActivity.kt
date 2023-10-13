@@ -3,6 +3,7 @@ package com.example.travelapp
 import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.icu.util.Calendar
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -123,12 +124,16 @@ class AddTravelPlanActivity : AppCompatActivity(), DatePickerDialog.OnDateSetLis
                         hargaPaket += harga
                         selectedPaket.add(nama)
                     }
+                    selected.setBackgroundColor(getColor(R.color.myrtie_green))
+                    selected.setTextColor(getColor(R.color.white))
                 }
                 else {
                     if (harga != null) {
                         hargaPaket -= harga
                         selectedPaket.remove(nama)
                     }
+                    selected.setBackgroundColor(getColor(R.color.white))
+                    selected.setTextColor(getColor(R.color.dark))
                 }
                 updateHargaView()
             }
@@ -169,8 +174,33 @@ class AddTravelPlanActivity : AppCompatActivity(), DatePickerDialog.OnDateSetLis
         month: Int,
         dayOfMonth: Int
     ) {
-        binding.btnShowCalendar.text = "$dayOfMonth ${monthToString(month)} $year"
-        stringTglPerjalanan = "$dayOfMonth/${month+1}/$year"
+        val calendar = Calendar.getInstance()
+        val yearNow = calendar.get(Calendar.YEAR)
+        val monthNow = calendar.get(Calendar.MONTH)
+        val dayNow = calendar.get(Calendar.DAY_OF_MONTH)
+        var valid = false
+//
+//        if (year == yearNow) {
+//            if (month == monthNow) {
+//                if (dayOfMonth >= dayNow) {
+//                    valid = true
+//                }
+//            }
+//        }
+        if (dayOfMonth >= dayNow) {
+            if (month == monthNow && year == yearNow) {
+                valid = true
+            }
+        }
+        else {
+            if (month > monthNow && year >= yearNow) {
+                valid = true
+            }
+        }
+        if (valid) {
+            binding.btnShowCalendar.text = "$dayOfMonth ${monthToString(month)} $year"
+            stringTglPerjalanan = "$dayOfMonth/${month + 1}/$year"
+        }
     }
     private fun monthToString(month: Int): String {
         return when(month) {

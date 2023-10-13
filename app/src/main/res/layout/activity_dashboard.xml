@@ -163,5 +163,6 @@
         android:fontFamily="@font/poppins_regular"
         app:layout_constraintBottom_toBottomOf="parent"
         android:padding="12dp"
+        android:backgroundTint="@color/imrik_blue"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

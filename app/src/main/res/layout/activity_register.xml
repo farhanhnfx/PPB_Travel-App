@@ -39,7 +39,6 @@
         app:layout_constraintTop_toBottomOf="@id/txt_email"
         android:hint="Masukkan email"
         android:fontFamily="@font/poppins_regular"
-        android:textStyle="italic"
         android:textSize="16sp"
         android:background="@drawable/rectangle_rounded"
         android:paddingVertical="8dp"
@@ -66,7 +65,6 @@
         app:layout_constraintTop_toBottomOf="@id/txt_username"
         android:hint="Masukkan username"
         android:fontFamily="@font/poppins_regular"
-        android:textStyle="italic"
         android:textSize="16sp"
         android:background="@drawable/rectangle_rounded"
         android:paddingVertical="8dp"
@@ -94,7 +92,6 @@
         app:layout_constraintTop_toBottomOf="@id/txt_password"
         android:hint="Masukkan password"
         android:fontFamily="@font/poppins_regular"
-        android:textStyle="italic"
         android:textSize="16sp"
         android:background="@drawable/rectangle_rounded"
         android:paddingVertical="8dp"
@@ -120,8 +117,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/txt_tgl_lahir"
+        android:fontFamily="@font/poppins_regular"
         android:text="Pilih tanggal lahir"
-        android:background="@drawable/rectangle_rounded"
+        style="@style/rounded_stroke_filled"
         />
 
     <Button
@@ -131,7 +129,7 @@
         android:text="Daftar"
         android:fontFamily="@font/poppins_regular"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:backgroundTint="#63B0CD"
+        android:backgroundTint="@color/imrik_blue"
         android:textSize="16sp"
         android:padding="12dp"
         />

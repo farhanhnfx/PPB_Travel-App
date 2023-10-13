@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/txt_tgl"
         android:text="Pilih tanggal perjalanan"
-
+        style="@style/rounded_stroke_filled"
         android:layout_marginTop="4dp"
         />
     <TextView
@@ -137,74 +137,74 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:singleSelection="false"
             >
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:id="@+id/btn_add_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Makan siang"
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="16sp"
-                style="@style/card_rounded_stroke"
+                style="@style/rounded_stroke"
                 android:layout_marginHorizontal="4dp"
                 />
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:id="@+id/btn_add_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Duduk pinggir jendela"
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="16sp"
-                style="@style/card_rounded_stroke"
+                style="@style/rounded_stroke"
                 android:layout_marginHorizontal="4dp"
                 />
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:id="@+id/btn_add_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Duduk bagian depan"
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="16sp"
-                style="@style/card_rounded_stroke"
+                style="@style/rounded_stroke"
                 android:layout_marginHorizontal="4dp"
                 />
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:id="@+id/btn_add_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Wi-Fi"
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="16sp"
-                style="@style/card_rounded_stroke"
+                style="@style/rounded_stroke"
                 android:layout_marginHorizontal="4dp"
                 />
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:id="@+id/btn_add_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Asuransi"
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="16sp"
-                style="@style/card_rounded_stroke"
+                style="@style/rounded_stroke"
                 android:layout_marginHorizontal="4dp"
                 />
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:id="@+id/btn_add_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bantal &amp; Selimut"
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="16sp"
-                style="@style/card_rounded_stroke"
+                style="@style/rounded_stroke"
                 android:layout_marginHorizontal="4dp"
                 />
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:id="@+id/btn_add_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TV &amp; Film"
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="16sp"
-                style="@style/card_rounded_stroke"
+                style="@style/rounded_stroke"
                 android:layout_marginHorizontal="4dp"
                 />
         </com.google.android.material.button.MaterialButtonToggleGroup>
@@ -244,6 +244,7 @@
         android:fontFamily="@font/poppins_medium"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="@color/imrik_blue"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
