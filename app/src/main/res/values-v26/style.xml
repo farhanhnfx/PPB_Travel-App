@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="RoundedButton">
-        <item name="android:paddingVertical">16dp</item>
-        <item name="android:paddingHorizontal">8dp</item>
-        <item name="android:background">@drawable/rectangle_rounded</item>
+    <style name="card_rounded_stroke">
+        <item name="strokeColor">@color/myrtie_green</item>
+        <item name="strokeWidth">3dp</item>
+        <item name="cornerRadius">15dp</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/dark</item>
+    </style>
+    <style name="card_rounded_stroke_filled">
+        <item name="strokeColor">@color/myrtie_green</item>
+        <item name="strokeWidth">3dp</item>
+        <item name="cornerRadius">15dp</item>
+        <item name="backgroundTint">@color/myrtie_green</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="marginHorizontal">4dp</item>
     </style>
 </resources>

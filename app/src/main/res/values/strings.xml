@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Travel App</string>
+    <array name="stasiun_name">
+        <item>Stasiun Tugu - Yogyakarta</item>
+        <item>Stasiun Balapan - Solo</item>
+        <item>Stasiun Pasar Senen - Jakarta</item>
+        <item>Stasiun Tawang - Semarang</item>
+        <item>Stasiun Madiun - Madiun</item>
+    </array>
 </resources>

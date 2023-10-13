@@ -1,5 +1,6 @@
 package com.example.travelapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
@@ -25,10 +26,8 @@ class LoginActivity : AppCompatActivity() {
             btnLogin.setOnClickListener {
                 if ((editEmail.text.toString() == email || editEmail.text.toString() == username)
                     && editPassword.text.toString() == password) {
-                    Toast.makeText(this@LoginActivity, "Login berhasil", Toast.LENGTH_SHORT).show()
-                }
-                else {
-                    Toast.makeText(this@LoginActivity, "Login gagal", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@LoginActivity, DashboardActivity::class.java)
+                    startActivity(intent)
                 }
             }
             btnShowPassword.setOnClickListener {

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity"
+    android:padding="32dp">
+
+    <TextView
+        android:id="@+id/txt_dashboard_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textSize="32sp"
+        android:textColor="@color/dark"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        />
+    <TextView
+        android:id="@+id/txt_trip_plan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rencana Perjalanan"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="20sp"
+        android:textColor="@color/dark"
+        app:layout_constraintTop_toBottomOf="@id/txt_dashboard_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginVertical="16dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/txt_trip_plan"
+        app:layout_constraintBottom_toTopOf="@id/btn_add_plan"
+        android:scrollbars="none"
+        android:paddingBottom="16dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:id="@+id/card_last_trip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txt_trip_plan"
+                android:background="@drawable/card_rounded"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal: "
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="#1E2019"
+                    android:layout_marginVertical="4dp"
+                    />
+                <TextView
+                    android:id="@+id/txt_card_tgl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#1E2019"
+                    android:layout_marginHorizontal="8dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Asal: "
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="#1E2019"
+                    android:layout_marginVertical="4dp"
+                    />
+                <TextView
+                    android:id="@+id/txt_card_asal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#1E2019"
+                    android:layout_marginHorizontal="8dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tujuan: "
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="#1E2019"
+                    android:layout_marginVertical="4dp"
+                    />
+                <TextView
+                    android:id="@+id/txt_card_tujuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#1E2019"
+                    android:layout_marginHorizontal="8dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kelas: "
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="#1E2019"
+                    android:layout_marginVertical="4dp"
+                    />
+                <TextView
+                    android:id="@+id/txt_card_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#1E2019"
+                    android:layout_marginHorizontal="8dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paket Perjalanan: "
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="#1E2019"
+                    android:layout_marginVertical="4dp"
+                    />
+                <TextView
+                    android:id="@+id/txt_card_paket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#1E2019"
+                    android:layout_marginHorizontal="8dp"
+                    />
+            </LinearLayout>
+            <DatePicker
+                android:id="@+id/date_picker_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/card_last_trip"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginVertical="16dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/btn_add_plan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tambah Rencana Perjalanan"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="12dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
