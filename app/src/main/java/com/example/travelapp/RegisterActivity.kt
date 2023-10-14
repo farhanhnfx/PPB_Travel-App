@@ -80,7 +80,7 @@ class RegisterActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener
             return true
         }
         else if (yearNow - yyyy == 15) {
-            if (monthNow - mm > 1) {
+            if (monthNow - mm > 0) {
                 return true
             }
             else if (monthNow - mm == 0) {

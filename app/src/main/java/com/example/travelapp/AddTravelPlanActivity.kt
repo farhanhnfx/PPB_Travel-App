@@ -118,7 +118,7 @@ class AddTravelPlanActivity : AppCompatActivity(), DatePickerDialog.OnDateSetLis
             toggleGroupPaket.addOnButtonCheckedListener { group, checkedId, isChecked ->
                 val selected = findViewById<MaterialButton>(checkedId)
                 val nama = selected.text.toString()
-                val harga = listPaket[selected.text.toString()]
+                val harga = listPaket[nama]
                 if (isChecked) {
                     if (harga != null) {
                         hargaPaket += harga
@@ -179,14 +179,7 @@ class AddTravelPlanActivity : AppCompatActivity(), DatePickerDialog.OnDateSetLis
         val monthNow = calendar.get(Calendar.MONTH)
         val dayNow = calendar.get(Calendar.DAY_OF_MONTH)
         var valid = false
-//
-//        if (year == yearNow) {
-//            if (month == monthNow) {
-//                if (dayOfMonth >= dayNow) {
-//                    valid = true
-//                }
-//            }
-//        }
+
         if (dayOfMonth >= dayNow) {
             if (month == monthNow && year == yearNow) {
                 valid = true
